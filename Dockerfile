@@ -2,7 +2,7 @@ FROM ruby:2.3.1-slim
 
 EXPOSE 4567
 
-ENV DUMBINIT_VERSION=1.0.2
+ENV DUMBINIT_VERSION=1.1.1
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y -o Apt::Install-Recommends=0 wget ca-certificates && \
     wget -O /usr/local/bin/dumb-init https://github.com/Yelp/dumb-init/releases/download/v${DUMBINIT_VERSION}/dumb-init_${DUMBINIT_VERSION}_amd64 && \
